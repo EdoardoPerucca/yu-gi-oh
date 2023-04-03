@@ -4,7 +4,7 @@ import { store } from "../store.js";
 
 import CardItem from "./CardItem.vue";
 
-import CardCounter from "./CardCounter.vue";
+
 
 export default {
 
@@ -17,8 +17,9 @@ export default {
 
     components: {
         CardItem,
-        CardCounter,
     },
+
+
 
 }
 </script>
@@ -30,14 +31,10 @@ export default {
             <h1>Card Yu Gi Oh</h1>
         </em>
 
-        <div>
-            <input type="text" placeholder="Inserisci un nome">
-            <button>Cerca</button>
-        </div>
+
 
         <div id="card-list">
             <CardItem v-for="card in store.cards" :card="card"></CardItem>
-            <CardCounter></CardCounter>
         </div>
 
     </div>
@@ -50,7 +47,6 @@ export default {
     text-align: center;
     max-width: 1000px;
     margin: auto;
-    padding-top: 50px;
     gap: 2em;
 
     h1 {
